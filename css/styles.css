@@ -79,6 +79,7 @@ header {
         }
     } 
     .nav {
+        margin-bottom: 1rem;
         .contenedorLinks {
             display: flex;
             flex-wrap: wrap;
