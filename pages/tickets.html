@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Proyecto Integrador Front | Viviana Galvagno</title>
+</head>
+<body>
+    <header class="z-1">
+        <div class="logoHeader">
+            <a class="link activo" href="#">
+                <img class="logo" src="../assets/img/codoacodo.png" alt="Logo de Codo a codo 4.0" loading="lazy">
+                <h2>Conf Bs As</h2>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="contenedorLinks">
+                <li><a class="link activo" href="../index.html">La conferencia</a></li>
+                <li><a class="link pasivo" href="../index.html#sectionOradores">Los oradores</a></li>
+                <li><a class="link pasivo" href="../index.html#sectionLugarFecha">El lugar y la fecha</a></li>
+                <li><a class="link pasivo" href="../index.html#sectionFormularioOrador">Conviértete en orador</a></li>
+                <li><a class="link especial" href="#">Comprar tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Tarjetas -->
+        <section class="container pt-section my-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="row row-cols-1 row-cols-md-3 text-center">
+                        <!-- Tarjeta 1 -->
+                        <div class="col">
+                            <div class="card mb-4 rounded-1 shadow-sm border-primary">
+                                <div class="card-header py-3 text-white bg-primary border-primary">
+                                    <h4 class="my-0 fw-normal">Estudiante</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">80%</h3>
+                                    <small class="fw-light text-muted mt-3">* Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="col">
+                            <div class="card mb-4 rounded-1 shadow-sm border-info">
+                                <div class="card-header py-3 text-white bg-info border-info">
+                                    <h4 class="my-0 fw-normal">Trainee</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">50%</h3>
+                                    <small class="fw-light text-muted mt-3">* Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="col">
+                            <div class="card mb-4 rounded-1 shadow-sm border-warning">
+                                <div class="card-header py-3 text-white bg-warning border-warning">
+                                    <h4 class="my-0 fw-normal">Junior</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">15%</h3>
+                                    <small class="fw-light text-muted mt-3">* Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario -->
+        <section class="container pt-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- <h2 class="text-center text-uppercase">Venta <div class="fw-bold fs-2">Valor de ticket $200</div></h2> -->
+                    <h2 class="text-center text-uppercase">
+                        <div class="fs-6">Venta</div>
+                        <div class="fw-bold fs-2">Valor de ticket $200</div>
+                    </h2>
+                    <form id="formularioTickets" action="">
+                        <div class="row gx-2">
+                            <div class="col-md mb-3">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" aria-label="Nombre" required>
+                                <div class="invalid-feedback" id="mensajeErrorNombre">
+                                    <p>Ingrese su nombre</p>
+                                </div>
+                            </div>
+                            <div class="col-md mb-3">
+                                <input type="text" class="form-control" id="apellido" placeholder="Apellido" aria-label="Apellido" required>
+                                <div class="invalid-feedback" id="mensajeErrorApellido">
+                                    <p>Ingrese su apellido</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Email" aria-label="Email" required autocomplete="email">
+                                <div class="invalid-feedback" id="mensajeErrorEmail">
+                                    <p>Ingrese su mail correctamente</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-2">
+                            <div class="col-md mb-3">
+                                <label for="cantidadTickets" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="cantidadTickets" placeholder="Cantidad" aria-label="Cantidad" min="1" required>
+                                <div class="invalid-feedback" id="mensajeErrorCantidad">
+                                    <p>Ingrese una cantidad</p>
+                                </div>
+                            </div>
+                            <div class="col-md mb-3">
+                                <label for="categoriaSelect" class="form-label">Categoría</label>
+                                <select name="categoria" class="form-select" id="categoriaSelect" aria-label="Categoría">
+                                    <option value="" selected>--Seleccione--</option>
+                                    <option value="0">Sin Categoría</option>
+                                    <option value="1">Estudiante</option>
+                                    <option value="2">Trainee</option>
+                                    <option value="3">Junior</option>
+                                </select>
+                                <div class="invalid-feedback" id="mensajeErrorCategoria">
+                                    <p>Seleccione una categoría</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 text-dark"  style="background-color: var(--color-lavender);">
+                            <span class="mb-0">Total a pagar: $ </span>
+                            <span id="totalPago" class="fw-bold fs-5"></span>
+                        </div>
+                        <div class="col gx-2">
+                            <div class="btn-group w-100">
+                                <button type="reset" id="btnBorrar" class="btn btn-success w-50 my-3 solidButon">Borrar</button>
+                                <button type="submit" id="btnResumen" class="btn btn-success w-50 ms-2 my-3 solidButon">Resumen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <!-- Estructurar posible publicidad -->
+    </aside>
+    <footer class="footer">
+        <ul class="contenedorLinksFooter">
+            <li><a class="linkFooter" href="">Preguntas frecuentes</a></li>
+            <li><a class="linkFooter" href="">Contáctanos</a></li>
+            <li><a class="linkFooter" href="">Prensa</a></li>
+            <li><a class="linkFooter" href="">Conferencias</a></li>
+            <li><a class="linkFooter" href="">Términos y condiciones</a></li>
+            <li><a class="linkFooter" href="">Privacidad</a></li>
+            <li><a class="linkFooter" href="">Estudiantes</a></li>
+        </ul>
+    </footer>
+    <script src="../js/tickets.js"></script>
+</body>
+</html>
